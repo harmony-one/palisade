@@ -86,19 +86,19 @@ getPage location =
             Admin
 
         Just [ "liquidate" ] ->
-            Liquidate
+            Home
 
         Just [ "propose" ] ->
-            Propose
+            Home
 
         Just [ "cap" ] ->
-            CrowdPropose
+            Home
 
         Just [ "terms" ] ->
-            TermsOfService
+            Home
 
         Just [ "vote" ] ->
-            Vote
+            Home
 
         _ ->
             Home

@@ -1,6 +1,6 @@
 {
   "API_BASE_URL_MAP": {
-    "v3_api": "https://v3-api-stage.compound.finance/"
+    "v3_api": ""
   },
   "DATA_PROVIDERS": {
     "development": "http://localhost:8545",
@@ -20,6 +20,6 @@
     "development": 999,
     "harmony": 1666600000
   },
-  "DEFAULT_NETWORK": "mainnet",
+  "DEFAULT_NETWORK": "harmony",
   "BLOCKNATIVE_API_KEY": null
 }

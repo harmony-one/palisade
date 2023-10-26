@@ -1136,15 +1136,14 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
         footer =
             Html.map commonViewsTranslator (pageFooter userLanguage blockNumber model.preferences model.commonViewsModel)
 
-        claimCompView =
-            Html.map claimCompModalTranslator (ClaimCompModal.view userLanguage maybeConfig network account tokenState oracleState transactionState model.governanceState preferences model.claimCompModalState)
+        -- claimCompView =
+        --     Html.map claimCompModalTranslator (ClaimCompModal.view userLanguage maybeConfig network account tokenState oracleState transactionState model.governanceState preferences model.claimCompModalState)
     in
     case page of
         Liquidate ->
             [ header
             , Html.map liquidateTranslator (Liquidate.view userLanguage model.currentTimeZone maybeConfig network account compoundState tokenState oracleState preferences transactionState liquidateModel)
             , chooseWalletModal userLanguage model
-            , claimCompView
             , footer
             , replFooter
             ]
@@ -1154,7 +1153,6 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
             , header
             , Html.map adminTranslator (Admin.view userLanguage configs configAbis account network model.currentTimeZone model.currentTime model.adminModel)
             , chooseWalletModal userLanguage model
-            , claimCompView
             , footer
             , replFooter
             ]
@@ -1165,7 +1163,6 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
                 , header
                 , Html.map containerTranslator (DappInterface.Container.view model)
                 , chooseWalletModal userLanguage model
-                , claimCompView
                 , footer
                 , Html.map collateralToggleModalTranslator (CollateralToggleModal.view model)
                 , Html.map primaryActionModalTranslator (DappInterface.PrimaryActionModal.view model)
@@ -1179,7 +1176,6 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
             , Html.map proposeTranslator (Propose.view userLanguage False configs configAbis account network model.proposeModel)
             , footer
             , chooseWalletModal userLanguage model
-            , claimCompView
             , replFooter
             ]
 
@@ -1189,7 +1185,6 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
             , Html.map proposeTranslator (Propose.view userLanguage True configs configAbis account network model.proposeModel)
             , footer
             , chooseWalletModal userLanguage model
-            , claimCompView
             , replFooter
             ]
 
@@ -1197,7 +1192,6 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
             [ header
             , DappTerms.view userLanguage
             , chooseWalletModal userLanguage model
-            , claimCompView
             , footer
             , replFooter
             ]
@@ -1208,7 +1202,6 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
             , Html.map voteTranslator (Vote.view userLanguage maybeConfig network model.currentTimeZone model.currentTime account model.transactionState model.governanceState model.tokenState model.voteModel)
             , footer
             , chooseWalletModal userLanguage model
-            , claimCompView
             , replFooter
             ]
 
