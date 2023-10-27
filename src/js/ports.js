@@ -67,6 +67,18 @@ const NEW_BLOCK_DELAY = 1500;
 
 var currentSendGasPrice;
 
+function getSleuthVersion(network){
+  switch(network){
+    case 1666600000: 
+      return {
+        network: 'harmony',
+        version: 189, //nonce of deployed sleuth + 1
+        sleuthDeployer: '0x643c8A8120eFB675E82C5C58d8D473f5aDd0B5e6'
+      }
+    default:
+      return
+  }
+}
 function reportError(app) {
   return (error) => {
     // TODO call window.on_error() with the stuff
@@ -317,11 +329,12 @@ function subscribeToCTokenPorts(app, eth) {
     let cTokens = supportFromEntries(cTokenEntries);
 
     const web3 = await withWeb3Eth(eth);
+    const chainId = await web3.getChainId();
 
     const QUERY = Sleuth.querySol(SleuthQuery, { queryFunctionName: 'queryAllNoAccount' });
 
     const provider = new StaticJsonRpcProvider(web3.currentProvider.host);
-    let sleuth = new Sleuth(provider);
+    let sleuth = new Sleuth(provider, getSleuthVersion(chainId));
     let response = await sleuth.fetch(QUERY, [Object.keys(cTokens)]);
 
     handleNonAccountQueryResults(app, cTokens, response);
@@ -333,11 +346,12 @@ function subscribeToCTokenPorts(app, eth) {
       let cTokens = supportFromEntries(cTokenEntries);
 
       const web3 = await withWeb3Eth(eth);
+      const chainId = await web3.getChainId();
 
       const QUERY = Sleuth.querySol(SleuthQuery, { queryFunctionName: 'queryAllWithAccount' });
-
+      
       const provider = new StaticJsonRpcProvider(web3.currentProvider.host);
-      let sleuth = new Sleuth(provider);
+      let sleuth = new Sleuth(provider, getSleuthVersion(chainId));
 
       Promise.all([
         getTransactionCount(eth, customerAddress),

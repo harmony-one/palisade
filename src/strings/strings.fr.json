@@ -1,7 +1,7 @@
 {
     "no_account": "Pas de compte",
 
-    "bad_network_alert": "Compound Presidio n'est pas pris en charge sur ce réseau. Veuillez passer au réseau principal.",
+    "bad_network_alert": "Lend n'est pas pris en charge sur ce réseau. Veuillez passer au réseau principal.",
     "no_account_alert": "Veuillez activer MetaMask ou visiter cette page dans un navigateur Web3 pour interagir avec le protocole Compound",
     "testnet_alert": "Remarque: vous êtes actuellement connecté au {{network}}",
     "no_ether_alert": "Votre compte n'a pas d'Ether, qui est nécessaire pour interagir avec Compound",
@@ -12,7 +12,7 @@
     "latest_block": "Dernier bloc: {{latestBlock}}",
     "collateral_balance": "Solde des garanties",
     "net_apy": "Net APY",
-    "interest_earned_and_paid": "Intérêts gagnés et payés, plus COMP",
+    "interest_earned_and_paid": "Intérêts gagnés et payés",
     "earning": "Revenus",
     "tbd": "À être déterminer",
     "borrow_against": "Garantie de prêt",
@@ -159,7 +159,7 @@
     "no_executed_transactions": "Aucune transaction exécutée",
     "locked_until": "Verrouillé jusqu'au {{date}}",
 
-    "site_title": "Compound",
+    "site_title": "Lend",
     "site_title_liquidate": "Liquider",
     "site_title_terms": "termes",
     "site_title_dashboard": "Tableau de bord",

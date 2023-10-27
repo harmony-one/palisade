@@ -1,7 +1,7 @@
 {
     "no_account": "无账户",
 
-    "bad_network_alert": "此网络不支持 Compound Presidio。请切换到主网。",
+    "bad_network_alert": "此网络不支持 Lend。请切换到主网。",
     "no_account_alert": "请启用 MetaMask 或者在 Web3 浏览器中访问该页面",
     "testnet_alert": "注意：您正连接至 {{network}}",
     "no_ether_alert": "您的账户中没有可用于与 Compound 交互的 ETH",
@@ -12,7 +12,7 @@
     "latest_block": "最新版块：{{latestBlock}}",
     "collateral_balance": "抵押余额",
     "net_apy": "净APY",
-    "interest_earned_and_paid": "赚取和支付的利息，加上COMP",
+    "interest_earned_and_paid": "赚取和支付的利息",
     "earning": "收益",
     "tbd": "待定",
     "borrow_against": "借反对",
@@ -159,7 +159,7 @@
     "no_executed_transactions": "没有执行的交易",
     "locked_until": "锁定到{{date}}",
 
-    "site_title": "Compound",
+    "site_title": "Lend",
     "site_title_liquidate": "清算",
     "site_title_terms": "条款",
     "site_title_dashboard": "总览",

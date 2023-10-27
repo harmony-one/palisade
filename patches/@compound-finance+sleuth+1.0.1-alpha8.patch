@@ -1,0 +1,30 @@
+diff --git a/node_modules/@compound-finance/sleuth/dist/sleuth.d.ts b/node_modules/@compound-finance/sleuth/dist/sleuth.d.ts
+index abcaf98..5a7494e 100644
+--- a/node_modules/@compound-finance/sleuth/dist/sleuth.d.ts
++++ b/node_modules/@compound-finance/sleuth/dist/sleuth.d.ts
+@@ -3,6 +3,7 @@ import { AbiCoder, FunctionFragment, Fragment, Interface } from '@ethersproject/
+ interface Opts {
+     network?: string;
+     version?: number;
++    sleuthDeployer?: string;
+ }
+ interface Query<T, A extends any[] = []> {
+     bytecode: string;
+diff --git a/node_modules/@compound-finance/sleuth/dist/sleuth.js b/node_modules/@compound-finance/sleuth/dist/sleuth.js
+index 70c04ed..4a8e567 100644
+--- a/node_modules/@compound-finance/sleuth/dist/sleuth.js
++++ b/node_modules/@compound-finance/sleuth/dist/sleuth.js
+@@ -35,11 +35,11 @@ function hexify(v) {
+ }
+ class Sleuth {
+     constructor(provider, opts = {}) {
+-        var _a, _b;
++        var _a, _b, _c;
+         this.provider = provider;
+         this.network = (_a = opts.network) !== null && _a !== void 0 ? _a : defaultOpts.network;
+         this.version = (_b = opts.version) !== null && _b !== void 0 ? _b : defaultOpts.version;
+-        this.sleuthAddr = (0, address_1.getContractAddress)({ from: sleuthDeployer, nonce: this.version - 1 });
++        this.sleuthAddr = (0, address_1.getContractAddress)({ from: (_c = opts.sleuthDeployer) !== null && _c !== void 0 ? _c : sleuthDeployer, nonce: this.version - 1 });
+         this.sources = [];
+         this.coder = new abi_1.AbiCoder();
+     }
