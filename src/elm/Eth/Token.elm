@@ -39,7 +39,7 @@ import Decimal exposing (Decimal)
 import Dict exposing (Dict)
 import Eth.Config exposing (CTokenConfig, Config, TokenConfig)
 import Json.Decode exposing (Value, decodeValue, field, int, string, succeed)
-import Source.Infura exposing (loadEtherPrice)
+-- import Source.Infura exposing (loadEtherPrice)
 import Utils.Http
 
 
@@ -162,7 +162,7 @@ askEtherPrice config =
             Cmd.none
 
         Nothing ->
-            loadEtherPrice (handleError (Utils.Http.showError >> Error) SetInfuraEtherUSD)
+            Cmd.none
 
 
 tokenNewBlockCmd : Config -> TokenState -> Int -> Account -> Cmd TokenMsg

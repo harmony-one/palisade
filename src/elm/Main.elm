@@ -381,7 +381,6 @@ handleUpdatesFromEthConnectedWallet maybeConfig connectedEthWalletMsg model =
                 cmd =
                     Cmd.batch
                         ([ setBlockNativeCmd
-                         , refreshLatestGasPrice model.apiBaseUrlMap newNetwork
                          , Cmd.map WrappedTokenMsg newTokenCmd
                          , Cmd.map liquidateTranslator newLiquidateCmd
                          ]
