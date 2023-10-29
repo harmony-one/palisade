@@ -572,11 +572,14 @@ assetAndCompRateForm userLanguage config maybeEtherUsdPrice ({ chosenAsset, prim
                     "– %"
     in
     div [ class "form" ]
-        [ a ([ class "label-link", target "__blank" ] ++ href External "https://app.compound.finance/markets/?market=v2")
-            [ label [ class "dark" ] [ text formLabel ]
-            , div [ class "line-icon line-icon--small line-icon--external-link line-icon--external-link--black" ] []
-            ]
-        , div [ class "calculation" ]
+        [ 
+        -- TODO: enable when API for V2 markets are ready
+        --     a ([ class "label-link", target "__blank" ] ++ href External "<<api for v2 markets>>")
+        --     [ label [ class "dark" ] [ text formLabel ]
+        --     , div [ class "line-icon line-icon--small line-icon--external-link line-icon--external-link--black" ] []
+        --     ]
+        -- , 
+        div [ class "calculation" ]
             [ span []
                 [ span [ class ("icon icon--" ++ chosenAsset.underlying.symbol) ] []
                 , span [ class "description" ]
@@ -585,15 +588,15 @@ assetAndCompRateForm userLanguage config maybeEtherUsdPrice ({ chosenAsset, prim
                 ]
             , span [] [ text (formatPercentageWithDots interestRate) ]
             ]
-        , div [ class "calculation" ]
-            [ span []
-                [ span [ class "icon icon--COMP" ] []
-                , span [ class "description" ]
-                    [ text (Translations.distribution_apy userLanguage)
-                    ]
-                ]
-            , span [] [ text distributionApyText ]
-            ]
+        -- , div [ class "calculation" ]
+        --     [ span []
+        --         [ span [ class "icon icon--COMP" ] []
+        --         , span [ class "description" ]
+        --             [ text (Translations.distribution_apy userLanguage)
+        --             ]
+        --         ]
+        --     , span [] [ text distributionApyText ]
+        --     ]
         ]
 
 

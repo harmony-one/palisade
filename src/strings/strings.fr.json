@@ -27,7 +27,7 @@
     "confirm_the_transaction_with": "Confirmez la transaction avec {{web3Provider}}.",
     "transaction_broadcast_no_estimation": "Diffusion de la transaction.",
     "transaction_broadcast_with_estimation": "Diffusion de la transaction. Durée estimée de confirmation:",
-    "view_on_etherscan": "Voir sur Etherscan",
+    "view_on_etherscan": "Voir sur Harmony Explorer",
     "nothing_to_claim": "Rien à réclamer",
     "claim_comp": "Réclamer {{compAmount}} COMP",
     "claiming_comp": "Réclamation de {{compAmount}} COMP",

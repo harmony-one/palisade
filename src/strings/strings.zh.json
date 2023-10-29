@@ -27,7 +27,7 @@
     "confirm_the_transaction_with": "与{{web3Provider}}确认交易。",
     "transaction_broadcast_no_estimation": "交易广播。",
     "transaction_broadcast_with_estimation": "交易广播。预计确认时间：",
-    "view_on_etherscan": "在Etherscan上查看",
+    "view_on_etherscan": "在Harmony Explorer上查看",
     "nothing_to_claim": "没什么可要求的",
     "claim_comp": "索取{{compAmount}} COMP",
     "claiming_comp": "申请{{compAmount}} COMP",

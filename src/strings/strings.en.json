@@ -27,7 +27,7 @@
   "confirm_the_transaction_with": "Confirm the transaction with {{web3Provider}}.",
   "transaction_broadcast_no_estimation": "Transaction broadcast.",
   "transaction_broadcast_with_estimation": "Transaction broadcast. Estimated confirmation duration:",
-  "view_on_etherscan": "View on Etherscan",
+  "view_on_etherscan": "View on Harmony Explorer",
   "nothing_to_claim": "Nothing to Claim",
   "claim_comp": "Claim {{compAmount}} COMP",
   "claiming_comp": "Claiming {{compAmount}} COMP",
