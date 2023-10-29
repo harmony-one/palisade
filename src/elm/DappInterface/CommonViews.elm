@@ -188,8 +188,9 @@ pageHeader userLanguage page connectedWallet account _ governanceState _ =
                     ]
                 , div [ class "col-xs-5 col-sm-4 mobile-hide text-center links" ] links
                 , div [ class "col-xs-9 col-sm-4 text-right actions" ]
-                    [ compBalanceView account governanceState
-                    , accountButton
+                    [ 
+                        -- compBalanceView account governanceState,
+                     accountButton
                     ]
                 , div [ class "col-xs-9 mobile-links actions" ] mobileLinks
                 ]
