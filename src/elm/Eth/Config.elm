@@ -143,7 +143,10 @@ loadConfig networkName ({ contracts, cTokensRaw, tokens, blocks } as basicConfig
             Dict.get "Maximillion" contracts
 
         maybeCEtherTokenRaw =
-            Dict.get "cETH" cTokensRaw
+            if networkName == "harmony" then 
+                Dict.get "cONE" cTokensRaw 
+            else 
+                Dict.get "cETH" cTokensRaw 
 
         maybeFauceteer =
             Dict.get "Fauceteer" contracts
@@ -263,8 +266,8 @@ loadConfig networkName ({ contracts, cTokensRaw, tokens, blocks } as basicConfig
                 Just cEtherTokenConfig ->
                     let
                         dummyEthConfig =
-                            { name = "Ether"
-                            , symbol = "ETH"
+                            { name = "ONE"
+                            , symbol = "ONE"
                             , decimals = 18
                             , address = cEtherTokenConfig.address
                             , supported = Just True

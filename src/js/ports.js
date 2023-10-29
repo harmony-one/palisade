@@ -39,6 +39,7 @@ import {
 } from '../../node_modules/compound-components/src/js/sharedEth/eth';
 
 import SleuthQuery from '../sleuth/out/SleuthLens.sol/SleuthLens.json';
+import SleuthQueryHarmony from '../sleuth/out/SleuthLensHarmony.sol/SleuthLensHarmony.json';
 
 const PROVIDER_TYPE_NONE = 0;
 const PROVIDER_TYPE_LEDGER = 1;
@@ -65,11 +66,13 @@ const preferencesStorage = storage('preferences');
 // and reduce the likelihood of getting stale data.
 const NEW_BLOCK_DELAY = 1500;
 
+const HARMONY_CHAIN_ID = 1666600000
+
 var currentSendGasPrice;
 
 function getSleuthVersion(network){
   switch(network){
-    case 1666600000: 
+    case HARMONY_CHAIN_ID: 
       return {
         network: 'harmony',
         version: 189, //nonce of deployed sleuth + 1
@@ -79,6 +82,16 @@ function getSleuthVersion(network){
       return
   }
 }
+
+function getSleuthQuery(network){
+  switch(network){
+    case HARMONY_CHAIN_ID:
+      return SleuthQueryHarmony
+    default:
+      return SleuthQuery
+  }
+}
+
 function reportError(app) {
   return (error) => {
     // TODO call window.on_error() with the stuff
@@ -187,7 +200,7 @@ function subscribeToCTokenPorts(app, eth) {
       desiredAssetDecimals,
       isCEther,
     }) => {
-      const CEther = getContractJsonByName(eth, 'cETH');
+      const CEther = getContractJsonByName(eth, 'cONE');
       const CToken = getContractJsonByAddress(eth, cTokenAddress);
       const closeAmountWei = parseWeiStr(borrowedAssetAmountWeiStr);
 
@@ -331,7 +344,7 @@ function subscribeToCTokenPorts(app, eth) {
     const web3 = await withWeb3Eth(eth);
     const chainId = await web3.getChainId();
 
-    const QUERY = Sleuth.querySol(SleuthQuery, { queryFunctionName: 'queryAllNoAccount' });
+    const QUERY = Sleuth.querySol(getSleuthQuery(chainId), { queryFunctionName: 'queryAllNoAccount' });
 
     const provider = new StaticJsonRpcProvider(web3.currentProvider.host);
     let sleuth = new Sleuth(provider, getSleuthVersion(chainId));
@@ -348,14 +361,16 @@ function subscribeToCTokenPorts(app, eth) {
       const web3 = await withWeb3Eth(eth);
       const chainId = await web3.getChainId();
 
-      const QUERY = Sleuth.querySol(SleuthQuery, { queryFunctionName: 'queryAllWithAccount' });
+      const QUERY = Sleuth.querySol(getSleuthQuery(chainId), { queryFunctionName: 'queryAllWithAccount' });
       
       const provider = new StaticJsonRpcProvider(web3.currentProvider.host);
       let sleuth = new Sleuth(provider, getSleuthVersion(chainId));
 
+      const keys = chainId === HARMONY_CHAIN_ID ? [Object.keys(cTokens), customerAddress] : [Object.keys(cTokens), customerAddress, compAddress, capFactoryAddress]
+      
       Promise.all([
         getTransactionCount(eth, customerAddress),
-        sleuth.fetch(QUERY, [Object.keys(cTokens), customerAddress, compAddress, capFactoryAddress]),
+        sleuth.fetch(QUERY, keys),
       ])
         .then(([accountTrxCount, response]) => {
           handleNonAccountQueryResults(app, cTokens, response);
@@ -377,7 +392,7 @@ function subscribeToCTokenPorts(app, eth) {
               const tokenBalance = toScaledDecimal(tokenBalanceResult, underlyingDecimals);
               const tokenAllowance = toScaledDecimal(tokenAllowanceResult, underlyingDecimals);
 
-              if (cTokenSymbol == 'cETH') {
+              if ((chainId === HARMONY_CHAIN_ID && cTokenSymbol == 'cONE') || cTokenSymbol == 'cETH') {
                 // Since we're on eth anyway
                 app.ports.giveAccountBalancePort.send({
                   balance: tokenBalance,
