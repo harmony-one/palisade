@@ -4308,9 +4308,9 @@ component-emitter@^1.2.1:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-"compound-config@https://github.com/protofire/compound-config.git#c265c98a61aefb829b284175d8b0473b589c50cf":
+"compound-config@https://github.com/protofire/compound-config.git#3dcc5797459b8fb046fcdab52a6df636421121aa":
   version "0.0.0"
-  resolved "https://github.com/protofire/compound-config.git#c265c98a61aefb829b284175d8b0473b589c50cf"
+  resolved "https://github.com/protofire/compound-config.git#3dcc5797459b8fb046fcdab52a6df636421121aa"
 
 compressible@~2.0.16:
   version "2.0.18"
