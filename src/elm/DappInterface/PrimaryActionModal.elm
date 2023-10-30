@@ -1153,7 +1153,7 @@ faucetAllocateButton : Config -> Model -> CToken -> Html Msg
 faucetAllocateButton config { account, network, userLanguage } chosenAsset =
     case ( network, account, config.maybeFauceteer ) of
         ( Just actualNetwork, Acct customerAddress _, Just fauceteerAddress ) ->
-            if config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.MainNet then
+            if config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.Harmony then
                 a [ class "faucet-link", onClick <| WrappedTokenMsg <| Eth.Token.Web3TransactionMsg (Eth.Token.FauceteerDrip actualNetwork fauceteerAddress chosenAsset.contractAddress chosenAsset.underlying.assetAddress customerAddress) ]
                     [ text (Translations.faucet userLanguage) ]
 
@@ -1162,7 +1162,7 @@ faucetAllocateButton config { account, network, userLanguage } chosenAsset =
 
         ( Just actualNetwork, Acct customerAddress _, Nothing ) ->
             if
-                (config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.MainNet)
+                (config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.Harmony)
                     && not (actualNetwork == Network.Kovan && (chosenAsset.symbol == "cSAI" || chosenAsset.symbol == "cDAI"))
                     && not (actualNetwork == Network.Ropsten && (chosenAsset.symbol == "cTBTC" || chosenAsset.symbol == "cUSDT"))
             then

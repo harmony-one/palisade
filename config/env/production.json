@@ -3,20 +3,9 @@
     "v3_api": ""
   },
   "DATA_PROVIDERS": {
-    "development": "http://localhost:8545",
-    "goerli": "https://infura.io/goerli",
-    "rinkeby": "https://infura.io/rinkeby",
-    "kovan": "https://infura.io/kovan",
-    "ropsten": "https://infura.io/ropsten",
-    "mainnet": "https://infura.io/mainnet",
     "harmony": "https://api.harmony.one"
   },
   "NETWORK_MAP": {
-    "mainnet": 1,
-    "ropsten": 3,
-    "rinkeby": 4,
-    "goerli": 5,
-    "kovan": 42,
     "harmony": 1666600000
   },
   "DEFAULT_NETWORK": "harmony",
