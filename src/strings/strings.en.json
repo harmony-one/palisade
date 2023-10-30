@@ -4,7 +4,7 @@
   "bad_network_alert": "Lend is not supported on this network. Please switch to Harmony.",
   "no_account_alert": "Please enable MetaMask or visit this page in a Web3 browser to interact with the Lend protocol",
   "testnet_alert": "Note: You are currently connected to the {{network}} network",
-  "no_ether_alert": "Your account does not have any Ether, which is required to interact with Lend",
+  "no_ether_alert": "Your account does not have any ONE, which is required to interact with Lend",
   "high_gas_alert_1": "The Ethereum blockchain is currently congested; transactions are more ",
   "high_gas_alert_link": "expensive",
   "high_gas_alert_2": " than usual. Consider waiting to use Lend protocol.",

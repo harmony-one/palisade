@@ -4,7 +4,7 @@
     "bad_network_alert": "Lend n'est pas pris en charge sur ce réseau. Veuillez passer au réseau principal.",
     "no_account_alert": "Veuillez activer MetaMask ou visiter cette page dans un navigateur Web3 pour interagir avec le protocole Compound",
     "testnet_alert": "Remarque: vous êtes actuellement connecté au {{network}}",
-    "no_ether_alert": "Votre compte n'a pas d'Ether, qui est nécessaire pour interagir avec Compound",
+    "no_ether_alert": "Votre compte n'a pas d'ONE, qui est nécessaire pour interagir avec Lend",
     "high_gas_alert_1": "La blockchain Ethereum est actuellement encombrée; les transactions sont plus",
     "high_gas_alert_link": "cher",
     "high_gas_alert_2": "que d'habitude. Pensez à attendre pour utiliser Compound.",

@@ -4,7 +4,7 @@
     "bad_network_alert": "Lend no es compatible con esta red. Cambie a Harmony.",
     "no_account_alert": "Active MetaMask o visite esta página en un navegador Web3 para usar el Lend Protocol",
     "testnet_alert": "Nota: Actualmente está conectado a la {{network}}",
-    "no_ether_alert": "Su cuenta no tiene ningún Ether, que se requiere para interactuar con Lend",
+    "no_ether_alert": "Su cuenta no tiene ningún ONE, que se requiere para interactuar con Lend",
     "high_gas_alert_1": "La cadena de bloques Ethereum está actualmente congestionada; las transacciones son mas",
     "high_gas_alert_link": "costoso",
     "high_gas_alert_2": "que de costumbre. Considere esperar para usar Compuesto.",
