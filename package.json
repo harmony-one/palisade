@@ -40,7 +40,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "cli-table": "0.3.1",
     "compound-components": "https://github.com/protofire/compound-components.git#e8e242c197b307c5e63758fb33092e3abd6d2052",
-    "compound-config": "https://github.com/protofire/compound-config.git#c265c98a61aefb829b284175d8b0473b589c50cf",
+    "compound-config": "https://github.com/protofire/compound-config.git#3dcc5797459b8fb046fcdab52a6df636421121aa",
     "connect-history-api-fallback": "^1.5.0",
     "core-js": "3",
     "cross-spawn": "^7.0.2",
