@@ -1236,7 +1236,8 @@ alertView ({ account, maybeGasPrice, network, userLanguage } as model) =
                         testNetworkNoEtherAlert userLanguage (Network.networkName testNet) address
 
                     ( Just testNet, _, _ ) ->
-                        testNetworkAlert userLanguage (Network.networkName testNet)
+                        -- testNetworkAlert userLanguage (Network.networkName testNet)
+                        text ""
 
                     ( Nothing, True, _ ) ->
                         text ""

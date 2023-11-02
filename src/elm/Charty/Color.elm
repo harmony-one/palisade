@@ -28,8 +28,8 @@ type alias Color =
 defaultPalette : Array Color
 defaultPalette =
     Array.fromList
-        [ "#9669ED" -- borrow
-        , "#00D395" -- supply
+        [ "#00E8A2" -- borrow
+        , "#00AEE9" -- supply
         , "#657786" -- color_grey_1
         ]
 
@@ -46,7 +46,7 @@ assignDefaults dataset =
         color index =
             case Array.get (modBy colorCount index) defaultPalette of
                 Nothing ->
-                    "#00D395"
+                    "#00AEE9"
 
                 Just x ->
                     x

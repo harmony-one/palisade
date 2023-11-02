@@ -87,7 +87,7 @@ input:disabled + button {
     @include contrast($color_dark_2);
   }
   &.caution {
-    @include contrast($color_caution);
+    @include contrast($color_supply);
   }
   &.vote {
     font-size: 14px;
