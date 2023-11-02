@@ -1070,7 +1070,7 @@ getSubmitButton userLanguage config ({ chosenAsset, inputValue, primaryActionTyp
 
         supplyingAndBorrowingPaused =
             case ( mainModel.network, chosenAsset.symbol ) of
-                ( Just Network.MainNet, "cWBTC" ) ->
+                ( Just Network.Harmony, "cONE" ) ->
                     primaryActionType == MintAction || primaryActionType == BorrowAction
 
                 _ ->
@@ -1161,15 +1161,15 @@ faucetAllocateButton config { account, network, userLanguage } chosenAsset =
                 text ""
 
         ( Just actualNetwork, Acct customerAddress _, Nothing ) ->
-            if
-                (config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.Harmony)
-                    && not (actualNetwork == Network.Kovan && (chosenAsset.symbol == "cSAI" || chosenAsset.symbol == "cDAI"))
-                    && not (actualNetwork == Network.Ropsten && (chosenAsset.symbol == "cTBTC" || chosenAsset.symbol == "cUSDT"))
-            then
-                a [ class "faucet-link", onClick <| WrappedTokenMsg <| Eth.Token.Web3TransactionMsg (Eth.Token.FaucetTokenAllocate actualNetwork chosenAsset.contractAddress chosenAsset.underlying.assetAddress customerAddress chosenAsset.underlying.decimals) ]
-                    [ text (Translations.faucet userLanguage) ]
+            -- if
+            --     (config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.Harmony)
+            --         && not (actualNetwork == Network.Kovan && (chosenAsset.symbol == "cSAI" || chosenAsset.symbol == "cDAI"))
+            --         && not (actualNetwork == Network.Ropsten && (chosenAsset.symbol == "cTBTC" || chosenAsset.symbol == "cUSDT"))
+            -- then
+            --     a [ class "faucet-link", onClick <| WrappedTokenMsg <| Eth.Token.Web3TransactionMsg (Eth.Token.FaucetTokenAllocate actualNetwork chosenAsset.contractAddress chosenAsset.underlying.assetAddress customerAddress chosenAsset.underlying.decimals) ]
+            --         [ text (Translations.faucet userLanguage) ]
 
-            else
+            -- else
                 text ""
 
         _ ->

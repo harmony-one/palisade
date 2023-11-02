@@ -4308,9 +4308,9 @@ compound-components@protofire/compound-components#harmony-lend:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-compound-config@protofire/compound-config#harmony-lend:
+"compound-config@https://github.com/protofire/compound-config.git#2046dc20e7770f2ef9af762750b105b01f5ae9b4":
   version "0.0.0"
-  resolved "https://codeload.github.com/protofire/compound-config/tar.gz/b753aab7fee8847ac85f4df0ad08e5e1111b6b9f"
+  resolved "https://github.com/protofire/compound-config.git#2046dc20e7770f2ef9af762750b105b01f5ae9b4"
 
 compressible@~2.0.16:
   version "2.0.18"
