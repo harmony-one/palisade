@@ -23,7 +23,7 @@
 
 header {
   padding: 1rem 0;
-  background: $color_dark_1;
+  background: $color_harmony_dark_blue_1;
   min-height: 80px;
 
   &.dark-2 {
@@ -31,12 +31,21 @@ header {
   }
 
   .brand {
-    background-image: url(/images/harmony-logo.svg);
+    background-image: url(/images/lend-logo-gradient.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-color: transparent;
     width: 127px;
-    height: 27px;
+    height: 57px;
+  }
+
+  .network-logo {
+    background-image: url(/images/harmony-192.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
   }
 
   .text-center a {
@@ -134,13 +143,13 @@ header {
   }
 
   #account {
-    background: $color_dark_2;
+    background: $color_harmony_dark_blue_2;
     border-radius: $border-radius;
     padding: ($column-gutter * 0.5);
     margin-left: $column-gutter;
 
     &:hover {
-      background: lighten($color_dark_2, 5%);
+      background: lighten($color_harmony_dark_blue_2, 5%);
     }
 
     @include app-header-font;
@@ -184,7 +193,7 @@ header {
     background: $color_light_1;
 
     .brand {
-      background-image: url(/images/harmony-logo.svg);
+      background-image: url(/images/lend-logo-gradient.png);
     }
 
     .text-center a {

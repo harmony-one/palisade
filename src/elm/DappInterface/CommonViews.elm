@@ -149,12 +149,18 @@ pageHeader userLanguage page connectedWallet account _ governanceState _ =
                     , text accountAddress
                     ]
 
-        mobileLinks =
-            if connectedWallet.connectionState == Nothing || connectedWallet.connectionState == Just EthConnectedWallet.Disconnected then
-                [ accountButton ]
+        harmonyNetworkLink = 
+            a ([class "network-logo", target "_blank"] ++ href External "https://harmony.one") []
 
-            else
-                [ compBalanceView account governanceState ]
+        mobileLinks =
+            -- if connectedWallet.connectionState == Nothing || connectedWallet.connectionState == Just EthConnectedWallet.Disconnected then
+                [ 
+                    harmonyNetworkLink,
+                    accountButton 
+                ]
+
+            -- else
+            --     [ compBalanceView account governanceState ]
 
         links =
             let
@@ -177,20 +183,21 @@ pageHeader userLanguage page connectedWallet account _ governanceState _ =
             [ a (class homeClass :: href PageNavigation (getHrefUrl Home)) [ text (Translations.dashboard userLanguage) ]
             -- , a (href External (v2MarketsExternalLink)) [ text (Translations.markets userLanguage) ]
             -- , a (href External (v3VoteExternalLink)) [ text (Translations.vote userLanguage) ]
-            , a (href External (swapLink)) [ text ("Swap") ]
+            ,  a ([target "_blank"] ++ href External swapLink) [text ("Swap")]
             ]
     in
     header [ class "dapp" ]
         [ div [ class "container-large" ]
             [ div [ class "row align-middle" ]
                 [ div [ class "col-xs-3 col-sm-4" ]
-                    [ a (class "brand" :: href External "https://harmony.one") []
+                    [ a (class "brand" :: href External "https://lend.country") []
                     ]
                 , div [ class "col-xs-5 col-sm-4 mobile-hide text-center links" ] links
                 , div [ class "col-xs-9 col-sm-4 text-right actions" ]
                     [ 
                         -- compBalanceView account governanceState,
-                     accountButton
+                        harmonyNetworkLink,
+                        accountButton
                     ]
                 , div [ class "col-xs-9 mobile-links actions" ] mobileLinks
                 ]

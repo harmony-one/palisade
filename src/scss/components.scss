@@ -2,7 +2,7 @@
 
 .brand {
   display: inline-block;
-  background-image: url(/images/harmony-logo.svg); //TODO: See if we should move this?
+  background-image: url(/images/lend-logo-gradient.png); //TODO: See if we should move this?
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
@@ -12,7 +12,7 @@
 
 .mark {
   display: inline-block;
-  background-image: url(/compound-components/assets/asset_WONE.svg);
+  background-image: url(/compound-components/images/lend-logo-gradient.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: transparent;
@@ -21,7 +21,7 @@
 }
 
 section.hero {
-  background: $color_dark_1;
+  background: #101042;
   margin-bottom: -3.75rem;
   padding: ($column-gutter * 0.95) 0 ($column-gutter * 5.5);
   h1 {
