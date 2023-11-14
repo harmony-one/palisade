@@ -39,7 +39,7 @@
     "chalk": "^4.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "cli-table": "0.3.1",
-    "compound-components": "protofire/compound-components#lend-v1.0.2",
+    "compound-components": "protofire/compound-components#lend-v1.0.3",
     "compound-config": "https://github.com/protofire/compound-config.git#7facb2a11a25d9cdbbc8b4e4f5ad9bfe900f4485",
     "connect-history-api-fallback": "^1.5.0",
     "core-js": "3",
