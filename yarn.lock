@@ -4266,9 +4266,9 @@ component-emitter@^1.2.1:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
-compound-components@protofire/compound-components#lend-v1.0.3:
+compound-components@protofire/compound-components#lend-v1.0.4:
   version "1.0.2"
-  resolved "https://codeload.github.com/protofire/compound-components/tar.gz/d95794b4c85f50131b68edebef1e33457c16ae3a"
+  resolved "https://codeload.github.com/protofire/compound-components/tar.gz/da088f2dbb2ddb25c4b13c098c00c3f7ef5bbaec"
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
