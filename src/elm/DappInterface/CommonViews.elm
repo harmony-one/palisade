@@ -240,7 +240,7 @@ pageFooter userLanguage maybeBlockNumber preferences model =
                         -- , a (target "_blank" :: href External "https://compound.finance/governance/comp") [ text (Translations.comp userLanguage) ]
                         -- , a (target "_blank" :: href External "https://medium.com/compound-finance/the-compound-guide-to-supplying-borrowing-crypto-assets-94821f2950a0") [ text (Translations.support userLanguage) ]
                         -- , a (href PageNavigation (getHrefUrl TermsOfService)) [ text (Translations.terms userLanguage) ]
-                        , a (target "_blank" :: href External "https://doc.swap.country/terms-of-service-e096ae912a54464084a176f98127bf35") [ text (Translations.terms userLanguage) ]
+                        , a (target "_blank" :: href External "https://harmonyone.notion.site/Welcome-to-Lend-Docs-739d2643f9a74ee9a4f6672bd43213bf?pvs=4") [ text (Translations.terms userLanguage) ]
                         ]
                     ]
                 , div [ class "social" ]

@@ -22,7 +22,8 @@ getAllSupportedCTokens compoundState tokenState cTokenType =
                     mintPaused =
                         Balances.getMintGuardianPaused compoundState.cTokensMetadata cToken.contractAddress && cTokenType == ForCollateral
                 in
-                if cToken.symbol == "cONE" || cToken.symbol == "cSAI" || cToken.symbol == "cREP" || cToken.symbol == "cWBTC"  || cToken.symbol == "cFEI" || mintPaused then
+                if cToken.symbol == "cSAI" || cToken.symbol == "cREP" || cToken.symbol == "cWBTC"  || cToken.symbol == "cFEI" || mintPaused then
+                    -- cToken.symbol == "cONE" ||
                     let
                         underlyingBalances =
                             Balances.getUnderlyingBalances compoundState cToken.contractAddress
