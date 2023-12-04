@@ -1339,7 +1339,7 @@ testNetworkNoEtherAlert : Translations.Lang -> String -> String -> Html msg
 testNetworkNoEtherAlert userLanguage network address =
     div [ class "alert caution" ]
         [ div []
-            [ text (Translations.testnet_alert userLanguage network) ]
+            [ text ("Disclaimer: You are visiting an unreleased version of Lend Protocol. Caution is advised.") ]
         , div
             []
             [ text (Translations.no_ether_alert userLanguage) ]
