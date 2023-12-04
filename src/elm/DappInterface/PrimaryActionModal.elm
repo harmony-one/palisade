@@ -1070,7 +1070,7 @@ getSubmitButton userLanguage config ({ chosenAsset, inputValue, primaryActionTyp
 
         supplyingAndBorrowingPaused =
             case ( mainModel.network, chosenAsset.symbol ) of
-                ( Just Network.Harmony, "cETH" ) ->
+                ( Just Network.Harmony, "cONE" ) ->
                     primaryActionType == MintAction || primaryActionType == BorrowAction
 
                 _ ->

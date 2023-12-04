@@ -1236,8 +1236,7 @@ alertView ({ account, maybeGasPrice, network, userLanguage } as model) =
                         testNetworkNoEtherAlert userLanguage (Network.networkName testNet) address
 
                     ( Just testNet, _, _ ) ->
-                        -- testNetworkAlert userLanguage (Network.networkName testNet)
-                        text ""
+                        unreleasedVersionAlert 
 
                     ( Nothing, True, _ ) ->
                         text ""
@@ -1312,7 +1311,7 @@ chooseWalletModal userLanguage ({ connectedEthWalletModel } as model) =
 
 badNetworkAlert : Translations.Lang -> Html msg
 badNetworkAlert userLanguage =
-    div [ class "alert caution" ]
+    div [ class "alert notice" ]
         [ text (Translations.bad_network_alert userLanguage)
         ]
 
@@ -1336,7 +1335,6 @@ testNetworkAlert userLanguage network =
         [ text (Translations.testnet_alert userLanguage network)
         ]
 
-
 testNetworkNoEtherAlert : Translations.Lang -> String -> String -> Html msg
 testNetworkNoEtherAlert userLanguage network address =
     div [ class "alert caution" ]
@@ -1345,6 +1343,12 @@ testNetworkNoEtherAlert userLanguage network address =
         , div
             []
             [ text (Translations.no_ether_alert userLanguage) ]
+        ]
+
+unreleasedVersionAlert: Html msg
+unreleasedVersionAlert  =
+    div [ class "alert caution" ]
+        [ text ("Disclaimer: You are visiting an unreleased version of Lend Protocol. Caution is advised.")
         ]
 
 
