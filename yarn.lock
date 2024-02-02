@@ -4308,9 +4308,9 @@ compound-components@protofire/compound-components#lend-v1.0.5:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-"compound-config@https://github.com/protofire/compound-config.git#0075c9b9ef4d0384f140e4d6efa33c5f41999c5d":
+"compound-config@https://github.com/protofire/compound-config.git#0adb073306160c9bd6a74110663f0124a58464fe":
   version "0.0.0"
-  resolved "https://github.com/protofire/compound-config.git#0075c9b9ef4d0384f140e4d6efa33c5f41999c5d"
+  resolved "https://github.com/protofire/compound-config.git#0adb073306160c9bd6a74110663f0124a58464fe"
 
 compressible@~2.0.16:
   version "2.0.18"
