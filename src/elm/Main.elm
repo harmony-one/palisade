@@ -1235,8 +1235,8 @@ alertView ({ account, maybeGasPrice, network, userLanguage } as model) =
                     ( Just testNet, True, _ ) ->
                         testNetworkNoEtherAlert userLanguage (Network.networkName testNet) address
 
-                    ( Just testNet, _, _ ) ->
-                        unreleasedVersionAlert 
+                    -- ( Just testNet, _, _ ) ->
+                    --     unreleasedVersionAlert 
 
                     ( Nothing, True, _ ) ->
                         text ""

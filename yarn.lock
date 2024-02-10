@@ -4266,9 +4266,9 @@ component-emitter@^1.2.1:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
-compound-components@protofire/compound-components#lend-v1.0.5:
+compound-components@protofire/compound-components#lend-v1.0.6:
   version "1.0.2"
-  resolved "https://codeload.github.com/protofire/compound-components/tar.gz/350aac3536f5a5e8b9f4bbb5ca5ca4d8187e91b8"
+  resolved "https://codeload.github.com/protofire/compound-components/tar.gz/7b89b53363f94a6b70fda1f61a834327f7cf2af2"
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
@@ -4308,9 +4308,9 @@ compound-components@protofire/compound-components#lend-v1.0.5:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-"compound-config@https://github.com/protofire/compound-config.git#0adb073306160c9bd6a74110663f0124a58464fe":
+compound-config@protofire/compound-config#lend:
   version "0.0.0"
-  resolved "https://github.com/protofire/compound-config.git#0adb073306160c9bd6a74110663f0124a58464fe"
+  resolved "https://codeload.github.com/protofire/compound-config/tar.gz/06982de105f75d70bc02303619212b0b865584d8"
 
 compressible@~2.0.16:
   version "2.0.18"
