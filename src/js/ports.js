@@ -135,17 +135,18 @@ let blockNativeNetwork = {};
 let blockNative;
 
 function buildBlockNative(networkId) {
-  if (blockNativeApiKey) {
-    if (blockNativeNetwork[networkId]) {
-      blockNative = blockNativeNetwork[networkId];
-    } else {
-      blockNative = new BlocknativeSdk({
-        dappId: blockNativeApiKey,
-        networkId: networkId,
-      });
-      blockNativeNetwork[networkId] = blockNative;
-    }
-  }
+  // Blocknative does not support 1666600000 to watch the transaction
+  // if (blockNativeApiKey) {
+  //   if (blockNativeNetwork[networkId]) {
+  //     blockNative = blockNativeNetwork[networkId];
+  //   } else {
+  //     blockNative = new BlocknativeSdk({
+  //       dappId: blockNativeApiKey,
+  //       networkId: networkId,
+  //     });
+  //     blockNativeNetwork[networkId] = blockNative;
+  //   }
+  // }
 }
 
 async function handleReceipt(app, eth, trxHash, blockNumber, receipt, trxNonce) {
