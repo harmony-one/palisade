@@ -4308,9 +4308,9 @@ compound-components@protofire/compound-components#lend-v1.0.6:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-compound-config@protofire/compound-config#lend:
+compound-config@protofire/compound-config#lend-v1.0.1:
   version "0.0.0"
-  resolved "https://codeload.github.com/protofire/compound-config/tar.gz/06982de105f75d70bc02303619212b0b865584d8"
+  resolved "https://codeload.github.com/protofire/compound-config/tar.gz/2e6b5d6924a12401640716a1e1a03a31079e8c77"
 
 compressible@~2.0.16:
   version "2.0.18"
