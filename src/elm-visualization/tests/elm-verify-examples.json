@@ -1,0 +1,10 @@
+{
+  "root": "../src",
+  "tests" : [
+    "Scale",
+    "Statistics",
+    "Shape",
+    "Transition",
+    "Interpolation"
+  ]
+}

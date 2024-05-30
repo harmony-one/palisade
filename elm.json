@@ -3,6 +3,7 @@
     "source-directories": [
         "src/elm",
         "src/elm-bootstrap/src",
+        "src/elm-visualization/src",
         "node_modules/compound-components/src/elm"
     ],
     "elm-version": "0.19.1",
@@ -28,7 +29,6 @@
             "elm-community/maybe-extra": "5.2.0",
             "elm-community/typed-svg": "6.0.0",
             "folkertdev/one-true-path-experiment": "4.0.3",
-            "gampleman/elm-visualization": "2.1.1",
             "hecrj/html-parser": "2.3.4",
             "jinjor/elm-debounce": "3.0.0",
             "justinmimbs/date": "3.1.2",
@@ -38,7 +38,7 @@
             "prozacchiwawa/elm-keccak": "2.0.0",
             "rtfeldman/elm-hex": "1.0.0",
             "rtfeldman/elm-iso8601-date-strings": "1.1.3",
-            "ryannhg/date-format": "2.0.1",
+            "ryan-haskell/date-format": "1.0.0",
             "toastal/either": "3.5.2",
             "torreyatcitty/the-best-decimal": "1.1.0"
         },
