@@ -13,6 +13,7 @@ type Page
     | CrowdPropose
     | TermsOfService
     | Vote
+    | GetOne
 
 
 buildTitle : Translations.Lang -> Maybe String -> String
@@ -49,6 +50,9 @@ getPageTitle userLanguage page =
         Vote ->
             buildTitle userLanguage (Just (Translations.site_title_vote userLanguage))
 
+        GetOne ->
+            buildTitle userLanguage (Just (Translations.site_title_v2 userLanguage))
+
 
 getHrefUrl : Page -> String
 getHrefUrl page =
@@ -74,6 +78,9 @@ getHrefUrl page =
         Vote ->
             "#vote"
 
+        GetOne ->
+            "#getone"
+
 
 getPage : Url.Url -> Page
 getPage location =
@@ -84,6 +91,9 @@ getPage location =
     case fragments of
         Just [ "admin" ] ->
             Admin
+
+        Just [ "getone" ] ->
+            GetOne
 
         Just [ "liquidate" ] ->
             Home

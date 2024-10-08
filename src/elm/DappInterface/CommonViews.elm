@@ -179,11 +179,13 @@ pageHeader userLanguage page connectedWallet account _ governanceState _ =
                 v2MarketsExternalLink = "https://app.compound.finance/markets?market=v2"
                 v3VoteExternalLink = "https://app.compound.finance/vote"
                 swapLink = "https://swap.harmony.one"
+                getOneLink = "/#getone"
             in
             [ a (class homeClass :: href PageNavigation (getHrefUrl Home)) [ text (Translations.dashboard userLanguage) ]
             -- , a (href External (v2MarketsExternalLink)) [ text (Translations.markets userLanguage) ]
             -- , a (href External (v3VoteExternalLink)) [ text (Translations.vote userLanguage) ]
             ,  a ([target "_blank"] ++ href External swapLink) [text ("Swap")]
+            ,  a ([target "_self"] ++ href External getOneLink) [text ("Get ONE")]
             ]
     in
     header [ class "dapp" ]
