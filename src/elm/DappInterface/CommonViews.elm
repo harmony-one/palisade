@@ -179,11 +179,13 @@ pageHeader userLanguage page connectedWallet account _ governanceState _ =
                 v2MarketsExternalLink = "https://app.compound.finance/markets?market=v2"
                 v3VoteExternalLink = "https://app.compound.finance/vote"
                 swapLink = "https://swap.harmony.one"
+                getOneLink = "/#getone"
             in
             [ a (class homeClass :: href PageNavigation (getHrefUrl Home)) [ text (Translations.dashboard userLanguage) ]
             -- , a (href External (v2MarketsExternalLink)) [ text (Translations.markets userLanguage) ]
             -- , a (href External (v3VoteExternalLink)) [ text (Translations.vote userLanguage) ]
             ,  a ([target "_blank"] ++ href External swapLink) [text ("Swap")]
+            ,  a ([target "_self"] ++ href External getOneLink) [text ("Get ONE")]
             ]
     in
     header [ class "dapp" ]
@@ -240,7 +242,8 @@ pageFooter userLanguage maybeBlockNumber preferences model =
                         -- , a (target "_blank" :: href External "https://compound.finance/governance/comp") [ text (Translations.comp userLanguage) ]
                         -- , a (target "_blank" :: href External "https://medium.com/compound-finance/the-compound-guide-to-supplying-borrowing-crypto-assets-94821f2950a0") [ text (Translations.support userLanguage) ]
                         -- , a (href PageNavigation (getHrefUrl TermsOfService)) [ text (Translations.terms userLanguage) ]
-                        , a (target "_blank" :: href External "https://docs.lend.country/") [ text (Translations.terms userLanguage) ]
+                        , a (target "_blank" :: href External "https://docs.lend.harmony.one/") [ text (Translations.terms userLanguage) ]
+                        , a (target "_blank" :: href External "https://stats.lend.harmony.one/") [ text (Translations.markets userLanguage) ]
                         ]
                     ]
                 , div [ class "social" ]

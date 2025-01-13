@@ -26,6 +26,7 @@ import DappInterface.Page exposing (Page(..), getPage, getPageTitle)
 import DappInterface.PrimaryActionModal
 import DappInterface.Propose as Propose
 import DappInterface.Terms as DappTerms
+import DappInterface.GetOne as GetOne
 import DappInterface.Vote as Vote
 import Decimal exposing (Decimal)
 import Dict exposing (Dict)
@@ -1191,6 +1192,13 @@ viewFull ({ page, liquidateModel, transactionState, compoundState, tokenState, o
             [ header
             , DappTerms.view userLanguage
             , chooseWalletModal userLanguage model
+            , footer
+            , replFooter
+            ]
+
+        GetOne ->
+            [ header
+            , GetOne.view userLanguage
             , footer
             , replFooter
             ]
